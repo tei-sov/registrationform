@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class Users extends Component {
   render(props) {
     return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <h1>{this.props.email}</h1>
-        <h1>{this.props.gen}</h1>
-        <hr></hr>
+      <div className="user">
+        <h3 className="sight">{this.props.name}</h3>
+        <h3>{this.props.email}</h3>
+        <h3>{this.props.gen}</h3>
+        <br />
       </div>
     );
   }
