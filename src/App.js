@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Users from "./components/Users";
 import Usersforms from "./components/Usersforms";
-///import Swag from './components'
+import "./components/Swag.css";
 
 class App extends Component {
   constructor(props) {
@@ -9,9 +9,9 @@ class App extends Component {
 
     this.state = {
       users: [
-        { name: "kofi", email: "kof@gmail.com", gen: "3" },
-        { name: "sun", email: "sun@gmail.com", gen: "4" },
-        { name: "moon", email: "moon@gmail.com", gen: "5" },
+        { name: "Kofi", email: "kof@gmail.com", gen: 3 },
+        { name: "Sun", email: "sun@gmail.com", gen: 4 },
+        { name: "Moon", email: "moon@gmail.com", gen: 5 },
       ],
     };
   }
@@ -19,7 +19,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <br />
+
         <Usersforms />
+        <hr />
+        <br className="down" />
 
         {this.state.users.map((items, index) => {
           return (
@@ -29,7 +33,7 @@ class App extends Component {
                 email={items.email}
                 gen={items.gen}
               ></Users>
-              <hr></hr>
+              <br />
             </div>
           );
         })}

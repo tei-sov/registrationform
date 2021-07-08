@@ -10,9 +10,9 @@ class Usersforms extends Component {
     };
   }
 
-  handleChange = (Event) => {
+  handleChange = (event) => {
     this.setState({
-      [Event.target.name]: Event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -23,7 +23,7 @@ class Usersforms extends Component {
 
   render() {
     return (
-      <div>
+      <div className="first">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="">Full Name</label>
           <input
@@ -32,24 +32,27 @@ class Usersforms extends Component {
             name="name"
             onChange={this.handleChange}
           ></input>
-          <br></br>
+          <br />
 
           <label htmlFor="">Email</label>
           <input
             type="text"
             value={this.state.email}
-            email="email"
+            name="email"
             onChange={this.handleChange}
           ></input>
-          <br></br>
+          <br />
 
           <label htmlFor="">Number</label>
           <input
             type="number"
             value={this.state.number}
-            number="number"
+            name="number"
             onChange={this.handleChange}
           />
+
+          <br />
+
           <input type="submit" />
         </form>
       </div>
